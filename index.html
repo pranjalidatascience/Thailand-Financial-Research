@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Financial Research Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            color: #263445;
+        }
+
+        header {
+            background: #14283f;
+            color: white;
+            padding: 35px 7%;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: #b9c7d6;
+            font-size: 14px;
+        }
+
+        nav {
+            background: #203a57;
+            padding: 15px 7%;
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #79b8e8;
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 35px auto;
+            padding: 0 25px;
+        }
+
+        .section-title {
+            font-size: 21px;
+            margin-bottom: 8px;
+            color: #14283f;
+        }
+
+        .section-description {
+            color: #718096;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .chart-card {
+            background: white;
+            border-radius: 8px;
+            padding: 22px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .chart-header h3 {
+            font-size: 17px;
+            color: #203a57;
+        }
+
+        .chart-link {
+            color: #2878b5;
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .chart-link:hover {
+            text-decoration: underline;
+        }
+
+        iframe {
+            width: 100%;
+            height: 560px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #8492a6;
+            font-size: 12px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 25px;
+            }
+
+            iframe {
+                height: 450px;
+            }
+
+            main {
+                padding: 0 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <h1>Financial Research Dashboard</h1>
+        <p>Macroeconomic Data | Financial Markets | Economic Research</p>
+    </header>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <a href="#treasuries">Government Bond Yields</a>
+        <a href="#debt">Government Debt</a>
+        <a href="#additional">Additional Research</a>
+    </nav>
+
+    <main>
+
+        <!-- SECTION 1: TREASURIES -->
+
+        <section id="treasuries">
+
+            <h2 class="section-title">
+                Government Bond Yields
+            </h2>
+
+            <p class="section-description">
+                Comparison of US and Thailand 10-Year Government
+                Treasury Yields. The shaded region highlights
+                the COVID-19 period.
+            </p>
+
+            <div class="chart-card">
+
+                <div class="chart-header">
+                    <h3>US vs Thailand 10-Year Treasury Yields</h3>
+
+                    <a class="chart-link"
+                       href="charts/Treasury_Yields.html"
+                       target="_blank">
+                        Open Full Chart ↗
+                    </a>
+                </div>
+
+                <iframe
+                    src="charts/Treasury_Yields.html"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 2: DEBT -->
+
+        <section id="debt">
+
+            <h2 class="section-title">
+                Government Debt
+            </h2>
+
+            <p class="section-description">
+                Historical evolution of Thailand's
+                Government Debt-to-GDP ratio.
+            </p>
+
+            <div class="chart-card">
+
+                <div class="chart-header">
+                    <h3>Thailand Government Debt-to-GDP</h3>
+
+                    <a class="chart-link"
+                       href="charts/Thailand_Debt_GDP.html"
+                       target="_blank">
+                        Open Full Chart ↗
+                    </a>
+                </div>
+
+                <iframe
+                    src="charts/Thailand_Debt_GDP.html"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 3: FUTURE CHARTS -->
+
+        <section id="additional">
+
+            <h2 class="section-title">
+                Additional Research
+            </h2>
+
+            <p class="section-description">
+                Additional macroeconomic indicators and
+                financial market research will be added here.
+            </p>
+
+            <!-- Duplicate this card when adding a new chart -->
+
+            <div class="chart-card">
+
+                <div class="chart-header">
+                    <h3>Additional Research Chart</h3>
+
+                    <a class="chart-link"
+                       href="charts/Additional_Chart.html"
+                       target="_blank">
+                        Open Full Chart ↗
+                    </a>
+                </div>
+
+                <iframe
+                    src="charts/Additional_Chart.html"
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Financial Research Dashboard |
+        Data and analysis for informational purposes
+    </footer>
+
+</body>
+</html>
